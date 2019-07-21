@@ -1,0 +1,39 @@
+<div class="container">
+    
+ 
+    
+  <div class="row">
+        <div class="col-xs-12">
+            <h1>Posts</h1>
+            <ul class="list-group">
+                <app-post-list *ngFor="let post of posts ; let i = index"
+                             [id]="post.id"
+                             [title]="post.title"
+                             [content]="post.content"
+                             [loveIts]="post.loveIts"
+                             [numberLoveIt]="post.numberLoveIt"
+                             [numberdontLoveIt]="post.numberdontLoveIt"
+                             [created_at]="post.created_at"
+                             [index]="i">
+                </app-post-list>
+
+
+            </ul>
+        </div> 
+    </div>
+    
+    <div class="row">
+             <div class="col-xs-4">                 
+             </div>
+             
+            <div class="col-xs-4">
+                <button class="btn btn-sm btn-primary" (click)="fillPostsData()"><i class="fa fa-refresh"></i> Get Posts On Server  </button>
+            </div>
+             
+            <div class="col-xs-4"> 
+            </div>
+       
+    </div>
+        
+        <hr>
+</div>

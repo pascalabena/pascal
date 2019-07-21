@@ -1,0 +1,25 @@
+<li *ngIf="id>=0" [ngClass]="{'list-group-item': true,'list-group-item-success':[loveIts]>0, 'list-group-item-danger': [loveIts]<0}">
+    <p style="text-align: right"> {{created_at | date:"dd/mm/yyy , hh:mm:ss"}}</p>
+    <h2> {{title}} </h2>
+    <p> {{content}} </p>
+    
+    <div class="row">
+        
+        <div class="col-xs-2">
+            <button class="btn btn-sm btn-success" (click)="loveIt()"><i class="fa fa-thumbs-o-up"></i> Love it ({{numberLoveIt}}) </button>
+        </div>
+        
+        <div class="col-xs-2">
+         <button class="btn btn-sm btn-danger" (click)="dontLoveIt()"><i class="fa fa-thumbs-o-down"></i> Don't love it ({{numberdontLoveIt}})</button>
+        </div>
+        
+        <div class="col-xs-6">           
+        </div>
+        
+        <div class="col-xs-2">
+            <button class="btn btn-sm btn-danger" (click)="deletePost()"><i class="fa  fa-trash-o"></i> Supprimer post </button>
+        </div>
+        
+    </div>
+    
+</li>
